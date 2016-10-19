@@ -1,0 +1,258 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: "Microsoft Yahei";
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+body{
+	background-color: gray;
+}
+.outside{
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	background: #4b4b4b;
+	padding: 0 88px;
+}
+.outside li{
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+	width: 100px;
+	border: 2px solid #;
+	text-align: center;
+	opacity: 0.8;
+	transition: opacity 0.3s linear,background-color 0.3s linear;
+}
+.outside li:hover,.this{
+	opacity: 1;
+	background-color: #393939;
+}
+.ball{
+	height: 103px;
+    width: 180px;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 140px;
+    left: 480px;
+}
+.ball:after,.ball:before{
+	content: "";
+    height: 103px;
+    width: 180px;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.ball:before{
+	transform: rotate(60deg);
+	-webkit-transform: rotate(60deg);
+}
+.ball:after{
+	transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+}
+img{
+	top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+}
+.ball:hover{
+	transition: transform 1s;
+	animation: play 3s linear infinite;
+}
+.shuff{
+	display: none;
+	width: 800px;
+	top: 80px;
+	left:300px;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	margin-bottom: 30px;
+}
+.blanket,dd{
+	width: 740px;
+	padding: 0 20px;
+	height: 90px;
+	background-color: black;
+	opacity: 0.6;
+	color: white;
+	font-size: 32px;
+	line-height: 90px;
+	font-family: "微软雅黑";
+	margin: 10px;
+	transition: opacity 0.4s ease-in-out;
+}
+.blanket:hover{
+	opacity: 1;
+}
+.blanket:after{
+	content: "+";
+	font-size: 1em;
+	float: right;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+}
+.blanket_change:after{
+	-webkit-transform: rotate(135deg);
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+}
+dd{
+	display: none;
+	height: auto;
+	background-color: rgba(253,250,239,0.5);
+	padding: 20px 20px;
+	line-height: 30px;
+	font-size: 20px;
+	color: #000000;
+	margin-top: 0;
+}
+.ki{
+	width: 20px;
+	height: 20px;
+	background-color: hsl(30,20,10);
+}
+@keyframes play{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+
+/*sign*/
+
+
+.page-title{
+    text-align: center;
+}
+
+.page-title>button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: rgb(239,240,244);
+}
+
+.table-attend{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+}
+.table-attend tr>th{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.table-attend table{
+    width: 100%;
+}
+
+.table-attend th,.table-attend td{
+	 padding: 7px 0;
+    height: 30px;
+    line-height: 30px;    
+}
+
+.table-attend-odd{
+    background-color: #4b4b4b;
+}
+
+.table-attend-even{
+    background-color: #5f5f5f;
+}
+
+.table-attend tbody tr:hover{
+    background-color: #3c70e6;
+}
+
+.table-attend td{
+    height: 30px;
+    line-height: 30px;
+}
+
+.table-attend thead{
+    background-color: #3c70e6;
+}
+
+.time-atable{
+    width: 35%;
+}
+.name-atable{
+    width: 35%;
+}
+.edit-atable{
+    width: 30%;
+}
+
+.page-attend{
+    padding-left: 20px;
+}
+
+.page-attend>span{
+    display: block;
+    height: 31px;
+    line-height: 20px;
+    background-color: rgb(249,249,249);
+    float: left;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 2px 5px;
+    border: 1px solid #dddddd;
+}
+
+.page-attend>span:hover,.thispg-attend{
+    background-color: rgb(101,197,163);
+}
+
+.page-attend a{
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.signPic{
+	width: 100px;
+	height: 100px;
+	border: none;
+	background-image: url(../img/sign_pic.gif);
+	background-size: 100px;
+	border-radius: 50px;
+	
+}
+.signPic:hover{
+	animation:biga 0.7s ease-in-out infinite;
+}
+@keyframes biga{
+	0%{
+		transform:scale(1);
+	}
+	50%{
+		transform:scale(1.2);
+	}
+	100%{
+		transform:scale(1);
+	}
+}
+input{
+	width: 100px;
+	height: 30px;
+	font-size: 20px;
+	background-color: #807e7e;
+	color: white;
+	border: none;
+}
